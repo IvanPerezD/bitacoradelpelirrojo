@@ -38,6 +38,23 @@
       filter: brightness(0.55);
     }
 
+
+    .captain{
+      
+      position: fixed;
+      left: -10vw;
+      top: 70vh;
+      transform: translateY(-50%);
+      width: 50vw;
+      max-width: 850px;
+      z-index: 500;
+      opacity: 1;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+
+      
+    }
+    
     .fixed-logo {
       position: fixed;
       left: -10vw;
@@ -356,6 +373,7 @@
 </head>
 <body>
   <img src="Shanks_29.png" alt="Logo de Shanks" class="fixed-logo" />
+  <img src="captain.png" alt="Captain" class="captain" />
   <img src="titulo-shanks.png" alt="Título Bitácora del Pelirrojo" class="titulo-imagen" id="tituloImagen" />
   <div id="titulo-placeholder"></div>
 
