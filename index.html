@@ -5,6 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bitácora del Pelirrojo</title>
   <style>
+
+.label {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+  display: block;
+  text-shadow: 1px 1px 3px black;
+  color: white;
+}
+
+
     :root {
       --logo-scale-inicial: 3;
       --logo-scale-final: 1.5;
@@ -67,6 +79,7 @@
     }
 
     .timeline-container {
+      font-family: 'Shadows Into Light';
       display: flex;
       justify-content: center;
       align-items: center;
@@ -128,7 +141,7 @@
 
     .details {
       max-height: 0;
-      overflow: hidden;
+      overflow: visible; /* <-- CAMBIO AQUÍ */
       opacity: 0;
       transition: all 0.5s ease;
       background-color: rgba(34, 34, 34, 0.5);
@@ -137,11 +150,13 @@
       padding: 0 1rem;
       text-align: center;
       border-radius: 10px;
+      position: relative; /* para z-index */
+      z-index: 1;
     }
 
     .event:hover .details,
     .event.active .details {
-      max-height: 500px;
+      max-height: 1500px;
       padding: 1rem;
       opacity: 1;
     }
@@ -155,10 +170,13 @@
       cursor: pointer;
       border-radius: 10px;
       margin-bottom: 1rem;
+      position: relative;
+      z-index: 2;
     }
 
     .details img:hover {
       transform: scale(1.5);
+      z-index: 10;
     }
 
     /* Carrusel */
@@ -334,6 +352,7 @@
     }
 
 </style>
+
 </head>
 <body>
   <img src="shanks_29.png" alt="Logo de Shanks" class="fixed-logo" />
